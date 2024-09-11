@@ -14,7 +14,7 @@ int main(void)
 		putchar(alpha);
 		alpha++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
 
