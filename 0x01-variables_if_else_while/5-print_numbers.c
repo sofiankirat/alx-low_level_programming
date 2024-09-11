@@ -7,6 +7,13 @@
  */
 int main(void)
 {
-	printf("0123456789\n");
+	int digit = '0';
+
+	while (digit <= '9')
+	{
+		putchar(digit);
+		digit++;
+	}
+	putchar('\n');
 	return (0);
 }
