@@ -7,13 +7,6 @@
  */
 int main(void)
 {
-	int digit = '0';
-
-	while (digit <= 57)
-	{
-		putchar(digit);
-		digit++;
-	}
-	putchar('\n');
+	printf("0123456789\n");
 	return (0);
 }
