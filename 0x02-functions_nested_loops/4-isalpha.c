@@ -1,5 +1,5 @@
 /**
- * isalpha - checks for alphabetic character
+ * _isalpha - checks for alphabetic character
  * @c: The character to check
  *
  * Return: 1  if c is a letter, lowercase or uppercase and 0 otherwise
