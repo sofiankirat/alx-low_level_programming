@@ -2,24 +2,22 @@
 
 /**
  * even_sum_fib - prints the sum of the even-valued terms in Fibonacci sequence
+ * @n: The terms in the Fibonacci sequence do not exceed n
  *
  * Return: This function returns no value (void)
  */
-void even_sum_fib(void)
+void even_sum_fib(long int n)
 {
-	int i = 1, j = 1, z = 1, sum = 0;
+	long int j = 1, z = 1, sum = 0;
 
-	for (; i <= 50 ; i++)
+	for (; j <= n; )
 	{
-		if (j <= 4000000)
-		{
-			if (j % 2 == 0)
-				sum = sum + j;
-			j = j + z;
-			z = j - z;
-		}
+		if (j % 2 == 0)
+			sum = sum + j;
+		j = j + z;
+		z = j - z;
 	}
-	printf("%d\n", sum);
+	printf("%ld\n", sum);
 }
 
 /**
@@ -29,6 +27,6 @@ void even_sum_fib(void)
  */
 int main(void)
 {
-	even_sum_fib();
+	even_sum_fib(4000000);
 	return (0);
 }
