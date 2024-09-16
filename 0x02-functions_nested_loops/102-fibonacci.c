@@ -8,10 +8,12 @@
  */
 void fibonacci(int n)
 {
-	unsigned int i = 1, j = 1, z = 1;
+	int i = 1;
+
+	unsigned long int j = 1, z = 1;
 
 	do {
-		printf("%u", j);
+		printf("%lu", j);
 		if (i != 50)
 			printf(", ");
 		j = j + z;
