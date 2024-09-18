@@ -2,7 +2,7 @@
 
 /**
  * fibonacci - Prints the first n Fibonacci numbers, starting with 1 and 2
- * @n: Specify how many Fibonacci numbers will be printed
+ * @n: Specify how many Fibonacci numbers will be printed, max n = 92
  *
  * Return: This function returns no value (void)
  */
@@ -14,7 +14,7 @@ void fibonacci(int n)
 
 	do {
 		printf("%lu", j);
-		if (i != 50)
+		if (i != n)
 			printf(", ");
 		j = j + z;
 		z = j - z;
