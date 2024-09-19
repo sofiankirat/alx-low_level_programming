@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * mul - Multiplies two integers
  * @a: Integer 1 which is multiplied by integer 2
