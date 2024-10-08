@@ -3,7 +3,7 @@
 /**
  * puts2 - Prints every other character of a string,
  * starting with the first character, followed by a new line
- * @str: A ponter to a string, which will be print every other character of it
+ * @str: A ponter to a string, that will print every other character from it
  *
  * Return: This function returns no value (void)
  */
