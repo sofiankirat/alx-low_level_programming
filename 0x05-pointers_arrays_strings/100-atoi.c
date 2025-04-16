@@ -8,7 +8,6 @@
 int _atoi(char *s)
 {
 	int dig, counter = 0, i = 1, num = 0, p = 1, c = 0, j = 1, minus_num = 0, t;
-	int plus_num = 0;
 
 	while (*s != '\0')
 	{
@@ -16,17 +15,18 @@ int _atoi(char *s)
 		{
 			t = *(s + 1);
 			if ((t < 48 || t > 57) && t != 0)
+			{
+				c++;
 				break;
+			}
 		}
-		s++;
 		c++;
+		s++;
 	}
 	if (*s == '\0')
 		s--;
 	while (j <= c)
 	{
-		if (*s == 43)
-			plus_num++;
 		if (*s == 45)
 			minus_num++;
 		if (*s >= 48 && *s <= 57)
@@ -43,7 +43,7 @@ int _atoi(char *s)
 		s--;
 		j++;
 	}
-	if (minus_num > plus_num)
+	if (minus_num % 2 != 0)
 		return (-num);
 	else
 		return (num);
