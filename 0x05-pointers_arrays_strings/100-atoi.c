@@ -4,7 +4,7 @@
  *
  * Return: The integer converted from the string.
  */
-#include <stdio.h>
+
 int _atoi(char *s)
 {
 	int dig, counter = 0, i = 1, num = 0, p = 1, c = 0, j = 1, minus_num = 0, t;
@@ -20,6 +20,8 @@ int _atoi(char *s)
 				break;
 			}
 		}
+		if (*s == 45)
+			minus_num++;
 		c++;
 		s++;
 	}
@@ -27,8 +29,6 @@ int _atoi(char *s)
 		s--;
 	while (j <= c)
 	{
-		if (*s == 45)
-			minus_num++;
 		if (*s >= 48 && *s <= 57)
 		{
 			dig = *s - 48;
@@ -37,14 +37,14 @@ int _atoi(char *s)
 				p *= 10;
 				i++;
 			}
-			num += dig * p;
+			if (minus_num % 2 != 0)
+				num -= dig * p;
+			else
+				num += dig * p;
 			counter++;
 		}
 		s--;
 		j++;
 	}
-	if (minus_num % 2 != 0)
-		return (-num);
-	else
-		return (num);
+	return (num);
 }
