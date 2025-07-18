@@ -9,35 +9,43 @@
  */
 int main(void)
 {
-	int arr[1000], h = 0, count = 0, sum = 0;
+	int arr[1000], h = 0, count = 0, sum = 0, i = 0;
 
-	srand(time(NULL));
 	char s[1000], k;
 
-	for (int i = 0; i < 1000; i++)
+	srand(time(NULL));
+
+	while (i < 1000)
+	{
 		s[i] = 0;
+		i++;
+	}
+	i = 0;
 	while (sum < 2677)
 	{
 		int num = rand();
 
 		sprintf(s, "%d", num);
-		for (int i = 0; s[i] != '\0'; i++)
+		while (s[i] != '\0')
 		{
 			sum += s[i];
 			count++;
 			if (sum >= 2677)
 				break;
-		}
-		for (int i = 0; i < count; i++)
+			i++;
+		} i = 0;
+		while (i < count)
 		{
 			arr[h] = s[i];
 			h++;
-		}
-		count = 0;
-	}
-	k = 2772 - sum;
+			i++;
+		} count = 0;
+		i = 0;
+	} k = 2772 - sum;
 	arr[h] = k;
-	for (int i = 0; i <= h; i++)
+	while (i <= h)
+	{
 		printf("%c", arr[i]);
-	return (0);
+		i++;
+	} return (0);
 }
