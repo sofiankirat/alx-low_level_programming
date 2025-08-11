@@ -4,7 +4,7 @@
  * @dest: A pointer to char that will store the copy of the string.
  * @src: A pointer to char that contain the first character of the string.
  *
- * Return: Te pointer to dest.
+ * Return: The pointer to dest.
  */
 char *_strcpy(char *dest, char *src)
 {
