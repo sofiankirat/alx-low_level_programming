@@ -29,7 +29,7 @@ void print_number(int n)
 			break; }}
 	if (t == 1)
 	{
-		while (temp != 0)
+		while (d != 0)
 		{v = temp / d;
 			if (d != 1)
 				_putchar(v + 48);
