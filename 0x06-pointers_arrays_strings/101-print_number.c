@@ -30,14 +30,6 @@ void print_number(int n)
 	if (t == 1)
 	{
 		while (temp != 0)
-		{
-			v = temp / d;
-			_putchar(v + 48);
-			temp -= v * d;
-			d /= 10; }}
-	else
-	{d /= 10;
-		while (d != 0)
 		{v = temp / d;
 			if (d != 1)
 				_putchar(v + 48);
@@ -47,5 +39,13 @@ void print_number(int n)
 					_putchar(v + 48);
 				else
 					_putchar(v + 49); }
+			_putchar(v + 48);
+			temp -= v * d;
+			d /= 10; }}
+	else
+	{d /= 10;
+		while (d != 0)
+		{v = temp / d;
+			_putchar(v + 48);
 			temp -= v * d;
 			d /= 10; }}}
