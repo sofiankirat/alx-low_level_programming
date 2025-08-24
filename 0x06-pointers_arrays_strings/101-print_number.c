@@ -39,7 +39,6 @@ void print_number(int n)
 					_putchar(v + 48);
 				else
 					_putchar(v + 49); }
-			_putchar(v + 48);
 			temp -= v * d;
 			d /= 10; }}
 	else
