@@ -11,7 +11,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0, j = 0, c = 0, t = 0, t2 = 0;
+	unsigned int i = 0, j = 0, c = 0, t = 0;
 
 	for (; s[i] != '\0'; i++)
 	{
@@ -30,13 +30,8 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		else
 		{
-			t2 = 1;
 			break;
 		}
-	}
-	if (t2 == 0)
-	{
-		c++;
 	}
 	return (c);
 }
