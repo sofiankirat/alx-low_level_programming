@@ -24,6 +24,8 @@ char *_strchr(char *s, char c)
 	}
 	if (t == 1)
 		return (&s[index]);
+	else if (c == '\0')
+		return (&s[i]);
 	else
 		return (NULL);
 }
