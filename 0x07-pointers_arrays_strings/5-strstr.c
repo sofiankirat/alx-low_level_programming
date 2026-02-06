@@ -37,6 +37,8 @@ char *_strstr(char *haystack, char *needle)
 				t = 0;
 				i = index;
 			}
+			else
+				break;
 		}
 	}
 	return (NULL);
